@@ -1,0 +1,97 @@
+/* estilos para resetear todo el html */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* estilos específicos de los elementos html principales */
+#contenedor {
+	width: 100%;
+	max-width: 960px;
+}
+
+body {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: rgba(100, 100, 50, 0.3);
+	font-family: "Federo", sans-serif;
+ 	font-weight: 400;
+ 	font-style: normal;
+}
+
+header, footer {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: rgba(150, 150, 50, 0.5);
+	text-align: center;
+	border: 2px black solid;
+}
+
+main, article {
+	margin: 1rem;
+	padding: 1rem;
+	color: whitesmoke;
+	background-color: rgba(150, 50, 150, 0.6);
+	border: 2px black solid;
+}
+
+h2 {
+	color: black;
+	text-align: center;
+}
+
+
+/* estilos para el nav y sus elementos */
+nav {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	background-color: rgba(0, 150, 50, 0.3);
+	border:  2px black solid;
+
+}
+
+nav li {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	list-style: none;
+	display: inline-block;
+}
+
+a, footer {
+	font-family: Arial;
+}
+
+a:link {
+	padding: 0.2rem;
+	color: rgba(200, 200, 200, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+a:visited {
+	padding: 0.2rem;
+	color: rgba(50, 50, 50, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+a:hover {
+	padding: 0.2rem;
+	color: rgba(200, 200, 200, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+a:active {
+	padding: 0.2rem;	
+	color: rgba(200, 200, 200, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+
+/*estilos para el único ID en el footer, pero aun no logro resolverlo óptimamente */
+#adress {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	background-color: rgba(0, 150, 50, 0.3);
+	border: 2px black solid;
+}
