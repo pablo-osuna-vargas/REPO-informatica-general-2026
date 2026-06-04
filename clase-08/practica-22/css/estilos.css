@@ -22,12 +22,15 @@ body {
 	padding: 0;
 }
 
-.instrucciones, ol {
+form {
 	margin: 1rem;
-	padding: 1rem;
 }
 
-.bienvenida, .despedida {
+button {
+	margin: 1rem;
+}
+
+.mostrarPrecioDesc {
 	margin-bottom: 1rem;
 	margin-top: 1rem;
 	padding: 0;

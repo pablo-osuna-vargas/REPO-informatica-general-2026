@@ -4,35 +4,30 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<title>Práctica 21</title>
+	<title>Práctica 22</title>
 </head>
 
 <body>
 	<div id="contenedor">
 		<main>
-			<h1>Práctica 21</h1>
+			<h1>Práctica 22</h1>
+				<h2>Precio y descuento con JS</h2>
 
-			<section>
-				<h2>JS y café</h2>
-				<p class="bienvenida"></p>
-			</section>
+				<form action="#" method="get">
+					<legend>Descuentos</legend>
 
-			<div class="instrucciones">
-				<h3>Instrucciones para preparar café tipo ITALIANO (o MOKA) - 3 pocillos</h3>
-				<ol>
-					<li>desarmar la cafetera</li>
-					<li>calentar agua antes del punto de ebullición y llenar la caldera (o parte inferior de la cafetera) hasta el límite de la válvula de presión</li>
-					<li>si hay café molido colocar 2 o 3 cucharadas dentro del filtro y repartirlo que cubra todo el espacio por igual sin presionar. Luego insertar el filtro en la caldera y enroscar bien la parte superior</li>
-					<li>dejar la tapa abierta y poner a calentar a fuego medio/bajo aproximadamente 2 a 3 minutos hasta ver que el café comienza a subir por el depósito superior</li>
-					<li>cerrar la tapa y apagar el fuego luego de 30 segundos aprox</li>
-					<li>esperar un minuto y servir bien caliente en 3 pocillos para café</li>
-					<li>disfrutar de un ambiente cálido y con buena música</li>
-				</ol>
-			</div>
+					<label for="precio">Precio</label>
+					<input type="number" name="precio" id="precio">
 
-			<section>
-				<p class="despedida"></p>
-			</section>
+					<label for="descuento">Descuento</label>
+					<input type="number" name="descuento" id="descuento">
+					<br>
+
+					<button type="submit" name="calcular">Calcular</button>
+					<button type="reset" name="">Borrar</button>
+				</form>
+				
+				<p class="mostrarPrecioDesc"></p>
 		</main>
 	</div>
 

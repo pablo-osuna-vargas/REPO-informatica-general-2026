@@ -1,39 +1,39 @@
-// damos la bienvenida y preguntamos por personalizacion
-alert("Hola! Bienvenido a nuestra web sibarita!");
-let bienvenida = confirm("querés personalizar tu experiencia?");
-
-// si dan aceptar agrega el parrafo de bienvenida con el nombre, sino uno genérico
-if(bienvenida) {
-	let nombre = prompt("decime tu nombre, por favor","");
-	bienvenida = document.querySelector(".bienvenida");
-	bienvenida.innerHTML += "Bienvenidx " + nombre + "!"
-} else {
-	bienvenida = document.querySelector(".bienvenida");
-	bienvenida.innerHTML += "Bienvenidx a nuestra web sibarita";
+function precioDesc (a, b) {
+	let precioFinal = a-(a*b/100);
+	return precioFinal;
 }
 
+//capturo elementos HTML para hacer el calculo y mostrarlo //
+let capturoElemento = document.querySelector("form");
 
-// preguntamos por el cambio de estilo
-let darkMode = confirm("preferís el dark mode?");
+let capturoSubmit = capturoElemento.addEventListener("submit", function() {
+//dentro del Listener capturo los value del formulario para establecer los argumentos para a función creada //
+	//convierto a número el string devuelto por el .value //
+	let precio = Number(document.querySelector("#precio").value);
+	let descuento = Number(document.querySelector("#descuento").value);
 
-// si acepta, cambia a dark mode de contraste
-if(darkMode) {
-	darkMode = document.querySelector(".instrucciones");
-	darkMode.style.backgroundColor = "black";
-	darkMode.style.color = "whitesmoke";
-}
+	//llamo a la función //
+	let precioConDesc = precioDesc(precio, descuento);
+
+//capturo el párrafo LUEGO del cálculo para mostrar el mensaje de precio final con descuento //
+	let mostrarPrecioFinal = document.querySelector(".mostrarPrecioDesc");
+	mostrarPrecioFinal.innerHTML = "Precio con descuento: $" + precioConDesc;
+
+});
 
 
-// pregunto x despedida
-let despedida = Number(prompt("qué hora es para tu café..?",""));
 
-if(despedida >0 && despedida<=12) {
-	despedida = document.querySelector(".despedida");
-	despedida.innerHTML += "disfrutá tu café, que tengas un buen día!";
-} else if(despedida >12 && despedida<=18) {
-	despedida = document.querySelector(".despedida");
-	despedida.innerHTML += "disfrutá tu café, que tengas una tarde productiva!";
-} else {
-	despedida = document.querySelector(".despedida");
-	despedida.innerHTML += "disfrutá tu café, buenas noches!";
-}
+
+
+
+
+
+
+
+
+
+
+/*
+console.log("Precio sin descuento es $" + precio + "\n" + 
+	"El descuento es " + descuento + "% " + "\n" +
+	"Precio con descuento" + precioDesc);*/
