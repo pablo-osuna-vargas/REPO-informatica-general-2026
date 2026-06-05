@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<title>Práctica 26</title>
+</head>
+
+<body>
+	<div id="contenedor">
+		<main>
+			<h1>Práctica 26</h1>
+				<h2>Equipos para montaje</h2>
+
+				<form>
+					<fieldset>
+						<legend>Equipos</legend>
+						<p>Ingresá la cantidad por cada ítem</p>
+						<label for="proyectores">Proyectores:</label>
+						<input type="number" name="proyectores" id="proyectores">
+
+						<label for="computadoras">Computadoras:</label>
+						<input type="number" name="computadoras" id="computadoras">
+
+						<label for="pantallas">Pantallas:</label>
+						<input type="number" name="pantallas" id="pantallas">
+					</fieldset>
+
+					<fieldset>
+						<legend>Alquiler</legend>
+						<p>Ingresá la duración del alquiler</p>
+						<label for="alquiler">Días:</label>
+						<input type="number" name="alquiler" id="alquiler">
+					</fieldset>
+
+					<button id="enviar" type="submit">Enviar</button>
+					<button type="reset">Borrar</button>
+				</form>
+
+				<p id="total"></p>
+
+				<p id="totalDescuento"></p>
+		</main>
+	</div>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
