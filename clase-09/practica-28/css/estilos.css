@@ -1,0 +1,38 @@
+/* estilos para resetear todo el html */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* estilos específicos de los elementos html principales */
+body {
+	margin: 1rem;
+	background-color: rgba(100, 100, 50, 0.3);
+	font-family: "Federo", sans-serif;
+ 	font-weight: 400;
+ 	font-style: normal;
+}
+
+#contenedor {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+button {
+	margin: 1rem;
+	font-family: "Federo";
+	font-size: 1.2rem;
+}
+
+p {
+	margin: 1rem 0;
+	padding: 1rem;
+}
+
+h1, h2, section {
+	margin: 1rem;;
+}
