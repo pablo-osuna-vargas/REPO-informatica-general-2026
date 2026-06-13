@@ -1,334 +1,81 @@
-// BLOQUE elegir numero //
-/* capturo el formulario, defino la variable para el valor de numero elegido 
-y luego capturo el botón que cliqueó el usuario con su valor */
-let captura = document.querySelector("form");
-let numeroElegido;
+// DEFINICIONES y CAPTURAS que usaré //
+let capturaForm = document.querySelector("form");
+let botonEnviar = document.querySelector("#enviarDatos"); 
+botonEnviar.addEventListener("click", function(event) {
+event.preventDefault();
+llenarArrays();
+})
+let botonTotalClientesPromedio = document.querySelector("#totalClientesPromedio");
+let botonDescuento = document.querySelector("#descuento");
 
-let uno = document.querySelector("#uno");
-uno.addEventListener("click", function() {
-numeroElegido = Number(uno.value);
-console.log(numeroElegido);
+let mostrarTotalClientesPromedio = document.querySelector("#mostrarTotalClientesPromedio");
+let mostrarMayorCompraDescuento = document.querySelector("#mostrarMayorCompraDescuento");
 
-if(numeroElegido) {
-
-//BLOQUE azar //
-// creo un array vacío que se va a llenar con los números tirados al azar // 
-let dadosTirados = [];
-
-// uso FOR para la tirada de 5 numeros al azar y los ingreso en un array //
-for(i=0;i<5;i++) {
-	let numAzar = Math.floor(Math.random()*6)+1;
-	dadosTirados.push(numAzar);
-};
-
-// luego uso cada posicion "i" del array para cambiar el .src de cada imagen y así mostrar los números tirados al azar //
-let imagen1 = document.querySelector("#imagen1");
-	imagen1.src = "img/" + dadosTirados[0] + ".jpeg";
-
-let imagen2 = document.querySelector("#imagen2");
-	imagen2.src = "img/" + dadosTirados[1] + ".jpeg";
-
-let imagen3 = document.querySelector("#imagen3");
-	imagen3.src = "img/" + dadosTirados[2] + ".jpeg";
-
-let imagen4 = document.querySelector("#imagen4");
-	imagen4.src = "img/" + dadosTirados[3] + ".jpeg";
-
-let imagen5 = document.querySelector("#imagen5");
-	imagen5.src = "img/" + dadosTirados[4] + ".jpeg";
+let clientes = 0; // contador //
+let arrayClientes = [];
+let arrayMontos = [];
 
 
-// BLOQUE coincidencias, se ejecuta luego de cliquear un numero //
-// declaro una variable contador para contar cuantas coincidencias //
-	let coincidencias = 0;
+// FUNCIONES a usar una vez accionado el listener //
+function llenarArrays() {
+		let nombreCliente = document.querySelector("#nombre");
+		let valorNombreCliente = nombreCliente.value;
+		let montoCompra = document.querySelector("#monto");
+		let valorMontoCompra = Number(montoCompra.value);
 
-		// recorro el array de numeros al azar y actualizo cuantas coincidencias hay //
-		for (i=0;i<dadosTirados.length;i++) {
-			if(dadosTirados[i]===numeroElegido) {
-				coincidencias++;
-				console.log(coincidencias);
+		clientes++;
+		arrayClientes.push(valorNombreCliente);
+		arrayMontos.push(valorMontoCompra);
 
-				let imagenCoincidencia = document.querySelector("#imagen" + (i+1));
-				imagenCoincidencia.style.border = "1rem solid green";
-			}
-		}
+		nombreCliente.value = "";
+		montoCompra.value = "";
 
-			let mostrarCoincidencias = document.querySelector("#mostrarCoincidencias");
+		console.log(arrayMontos,arrayClientes);
 
-				if(coincidencias!=0) {
-					mostrarCoincidencias.innerText = coincidencias + " dados coinciden con tu apuesta!";
-				} else {
-					mostrarCoincidencias.innerText = "ningún dado coincide con tu apuesta!";
-				}
+		return clientes;
+}
+
+function promediar() {
+	let suma = 0;
+
+	for(let i=0;i<arrayMontos.length;i++) {
+		suma += Number(arrayMontos[i]);
 	}
-});
 
-let dos = document.querySelector("#dos");
-dos.addEventListener("click", function() {
-numeroElegido = Number(dos.value);
-console.log(numeroElegido);
+	let promedio = suma/arrayMontos.length;
 
-if(numeroElegido) {
-let dadosTirados = [];
-
-for(i=0;i<5;i++) {
-	let numAzar = Math.floor(Math.random()*6)+1;
-	dadosTirados.push(numAzar);
-};
-
-let imagen1 = document.querySelector("#imagen1");
-	imagen1.src = "img/" + dadosTirados[0] + ".jpeg";
-
-let imagen2 = document.querySelector("#imagen2");
-	imagen2.src = "img/" + dadosTirados[1] + ".jpeg";
-
-let imagen3 = document.querySelector("#imagen3");
-	imagen3.src = "img/" + dadosTirados[2] + ".jpeg";
-
-let imagen4 = document.querySelector("#imagen4");
-	imagen4.src = "img/" + dadosTirados[3] + ".jpeg";
-
-let imagen5 = document.querySelector("#imagen5");
-	imagen5.src = "img/" + dadosTirados[4] + ".jpeg";
-
-
-	let coincidencias = 0;
-
-		for (i=0;i<dadosTirados.length;i++) {
-			if(dadosTirados[i]===numeroElegido) {
-				coincidencias++;
-				console.log(coincidencias);
-
-				let imagenCoincidencia = document.querySelector("#imagen" + (i+1));
-				imagenCoincidencia.style.border = "1rem solid green";
-			}
-		}
-
-			let mostrarCoincidencias = document.querySelector("#mostrarCoincidencias");
-
-				if(coincidencias!=0) {
-					mostrarCoincidencias.innerText = coincidencias + " dados coinciden con tu apuesta!";
-				} else {
-					mostrarCoincidencias.innerText = "ningún dado coincide con tu apuesta!";
-				}
-
-	}
-});
-
-let tres = document.querySelector("#tres");
-tres.addEventListener("click", function() {
-numeroElegido = Number(tres.value);
-console.log(numeroElegido);
-
-if(numeroElegido) {
-let dadosTirados = [];
-
-for(i=0;i<5;i++) {
-	let numAzar = Math.floor(Math.random()*6)+1;
-	dadosTirados.push(numAzar);
-};
-
-let imagen1 = document.querySelector("#imagen1");
-	imagen1.src = "img/" + dadosTirados[0] + ".jpeg";
-
-let imagen2 = document.querySelector("#imagen2");
-	imagen2.src = "img/" + dadosTirados[1] + ".jpeg";
-
-let imagen3 = document.querySelector("#imagen3");
-	imagen3.src = "img/" + dadosTirados[2] + ".jpeg";
-
-let imagen4 = document.querySelector("#imagen4");
-	imagen4.src = "img/" + dadosTirados[3] + ".jpeg";
-
-let imagen5 = document.querySelector("#imagen5");
-	imagen5.src = "img/" + dadosTirados[4] + ".jpeg";
-
-
-	let coincidencias = 0;
-
-		for (i=0;i<dadosTirados.length;i++) {
-			if(dadosTirados[i]===numeroElegido) {
-				coincidencias++;
-				console.log(coincidencias);
-
-				let imagenCoincidencia = document.querySelector("#imagen" + (i+1));
-				imagenCoincidencia.style.border = "1rem solid green";
-			}
-		}
-
-		let mostrarCoincidencias = document.querySelector("#mostrarCoincidencias");
-
-				if(coincidencias!=0) {
-					mostrarCoincidencias.innerText = coincidencias + " dados coinciden con tu apuesta!";
-				} else {
-					mostrarCoincidencias.innerText = "ningún dado coincide con tu apuesta!";
-				}
-	}
-});
-
-let cuatro = document.querySelector("#cuatro");
-cuatro.addEventListener("click", function() {
-numeroElegido = Number(cuatro.value);
-console.log(numeroElegido);
-
-if(numeroElegido) {
-let dadosTirados = [];
-
-for(i=0;i<5;i++) {
-	let numAzar = Math.floor(Math.random()*6)+1;
-	dadosTirados.push(numAzar);
-};
-
-let imagen1 = document.querySelector("#imagen1");
-	imagen1.src = "img/" + dadosTirados[0] + ".jpeg";
-
-let imagen2 = document.querySelector("#imagen2");
-	imagen2.src = "img/" + dadosTirados[1] + ".jpeg";
-
-let imagen3 = document.querySelector("#imagen3");
-	imagen3.src = "img/" + dadosTirados[2] + ".jpeg";
-
-let imagen4 = document.querySelector("#imagen4");
-	imagen4.src = "img/" + dadosTirados[3] + ".jpeg";
-
-let imagen5 = document.querySelector("#imagen5");
-	imagen5.src = "img/" + dadosTirados[4] + ".jpeg";
-
-
-	let coincidencias = 0;
-
-		for (i=0;i<dadosTirados.length;i++) {
-			if(dadosTirados[i]===numeroElegido) {
-				coincidencias++;
-				console.log(coincidencias);
-
-				let imagenCoincidencia = document.querySelector("#imagen" + (i+1));
-				imagenCoincidencia.style.border = "1rem solid green";
-			}
-		}
-
-		let mostrarCoincidencias = document.querySelector("#mostrarCoincidencias");
-
-				if(coincidencias!=0) {
-					mostrarCoincidencias.innerText = coincidencias + " dados coinciden con tu apuesta!";
-				} else {
-					mostrarCoincidencias.innerText = "ningún dado coincide con tu apuesta!";
-				}
-	}
-});
-
-let cinco = document.querySelector("#cinco");
-cinco.addEventListener("click", function() {
-numeroElegido = Number(cinco.value);
-console.log(numeroElegido);
-
-if(numeroElegido) {
-let dadosTirados = [];
-
-for(i=0;i<5;i++) {
-	let numAzar = Math.floor(Math.random()*6)+1;
-	dadosTirados.push(numAzar);
-};
-
-let imagen1 = document.querySelector("#imagen1");
-	imagen1.src = "img/" + dadosTirados[0] + ".jpeg";
-
-let imagen2 = document.querySelector("#imagen2");
-	imagen2.src = "img/" + dadosTirados[1] + ".jpeg";
-
-let imagen3 = document.querySelector("#imagen3");
-	imagen3.src = "img/" + dadosTirados[2] + ".jpeg";
-
-let imagen4 = document.querySelector("#imagen4");
-	imagen4.src = "img/" + dadosTirados[3] + ".jpeg";
-
-let imagen5 = document.querySelector("#imagen5");
-	imagen5.src = "img/" + dadosTirados[4] + ".jpeg";
-
-
-	let coincidencias = 0;
-
-		for (i=0;i<dadosTirados.length;i++) {
-			if(dadosTirados[i]===numeroElegido) {
-				coincidencias++;
-				console.log(coincidencias);
-
-				let imagenCoincidencia = document.querySelector("#imagen" + (i+1));
-				imagenCoincidencia.style.border = "1rem solid green";
-			}
-		}
-
-		let mostrarCoincidencias = document.querySelector("#mostrarCoincidencias");
-
-				if(coincidencias!=0) {
-					mostrarCoincidencias.innerText = coincidencias + " dados coinciden con tu apuesta!";
-				} else {
-					mostrarCoincidencias.innerText = "ningún dado coincide con tu apuesta!";
-				}
-	}
-});
-
-let seis = document.querySelector("#seis");
-seis.addEventListener("click", function() {
-numeroElegido = Number(seis.value);
-console.log(numeroElegido);
-
-if(numeroElegido) {
-let dadosTirados = [];
-
-for(i=0;i<5;i++) {
-	let numAzar = Math.floor(Math.random()*6)+1;
-	dadosTirados.push(numAzar);
-};
-
-let imagen1 = document.querySelector("#imagen1");
-	imagen1.src = "img/" + dadosTirados[0] + ".jpeg";
-
-let imagen2 = document.querySelector("#imagen2");
-	imagen2.src = "img/" + dadosTirados[1] + ".jpeg";
-
-let imagen3 = document.querySelector("#imagen3");
-	imagen3.src = "img/" + dadosTirados[2] + ".jpeg";
-
-let imagen4 = document.querySelector("#imagen4");
-	imagen4.src = "img/" + dadosTirados[3] + ".jpeg";
-
-let imagen5 = document.querySelector("#imagen5");
-	imagen5.src = "img/" + dadosTirados[4] + ".jpeg";
-
+	mostrarTotalClientesPromedio.innerText = "total de clientes: " + clientes + "\n";
+	"la compra promedio es de: $" + promedio;
 	
-	let coincidencias = 0;
+	return promedio;
+}
 
-		for (i=0;i<dadosTirados.length;i++) {
-			if(dadosTirados[i]===numeroElegido) {
-				coincidencias++;
-				console.log(coincidencias);
+function descuento() {
+	let mayorCompra = arrayMontos[0];
+	let montoFinal;
 
-				let imagenCoincidencia = document.querySelector("#imagen" + (i+1));
-				imagenCoincidencia.style.border = "1rem solid green";
-			}	
+	for(let i=1;i<arrayMontos.length;i++) {
+		if(Number(arrayMontos[i])>mayorCompra) {
+			mayorCompra = arrayMontos[i];
+		}
+	}
+
+	mostrarMayorCompraDescuento.innerText = "la mayor compra fue: $" + mayorCompra + "\n";
+
+	if(mayorCompra>50000) {
+			let descMayor = mayorCompra*30/100;
+			montoFinal = mayorCompra - descMayor;
+		} else {
+			let descMenor = mayorCompra*15/100;
+			montoFinal = mayorCompra - descMenor;
 		}
 
-		let mostrarCoincidencias = document.querySelector("#mostrarCoincidencias");
+	mostrarMayorCompraDescuento.innerText += "monto final con descuento: $" + montoFinal;
 
-				if(coincidencias!=0) {
-					mostrarCoincidencias.innerText = coincidencias + " dados coinciden con tu apuesta!";
-				} else {
-					mostrarCoincidencias.innerText = "ningún dado coincide con tu apuesta!";
-				}
-	}
-});
+	return montoFinal;
+}
 
 
-// agrego un boton de reset para volver a apostar y que limpie estilos, array y parrafos //
-let reset = document.querySelector("#borrar");
-reset.addEventListener("click", function() {
-	dadosTirados = [];
-	mostrarCoincidencias.innerText = "";
-	
-	// uso "i" como contador para capturar imagenes para "limpiar" el estilo de borde // 
-	for(i=0;i<5;i++) {
-		let imagenReset = document.querySelector("#imagen" + (i+1));
-		imagenReset.style.border = "none";
-	}
-});
+// EVENTOS //
+botonTotalClientesPromedio.addEventListener("click", promediar);
+botonDescuento.addEventListener("click", descuento);

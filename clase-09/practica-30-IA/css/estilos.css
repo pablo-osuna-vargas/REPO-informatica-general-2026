@@ -23,7 +23,7 @@ body {
 }
 
 button {
-	display: block;
+	display: inline-block;
 	margin: 0.5rem;
 	padding: 0;
 	width: 30%;

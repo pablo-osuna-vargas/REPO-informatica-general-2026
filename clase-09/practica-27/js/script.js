@@ -32,6 +32,14 @@ botonTotal.addEventListener("click", function() {
 	let mostrarTotal = document.querySelector("#mostrarTotal");
 	mostrarTotal.innerText = "el total de la compra es: $" + total;  
 	}
+
+	let promedio = total / libros.length;
+
+	let botonPromedio = document.querySelector("#mostrarPromedio");
+	botonPromedio.addEventListener("click", function() {
+		let mostrarPromedio = document.querySelector("#promedio");
+		mostrarPromedio.innerText = "el promedio de tu compra es: $" + promedio;
+	});
 });
 
 
@@ -61,7 +69,7 @@ botonCaroYbarato.addEventListener("click", function() {
 // pregunta: no es más simple usar un Math.floor o un Math.ceil para averiguar el mas caro y el mas barato? //
 // respuesta: NO. Porque Math.max y min solo pueden comparar ingresando los valores separados con coma //
 
-
+/*
 let promedio = total / libros.length;
 
 let botonPromedio = document.querySelector("#mostrarPromedio");
@@ -69,5 +77,6 @@ botonPromedio.addEventListener("click", function() {
 	let mostrarPromedio = document.querySelector("#promedio");
 	mostrarPromedio.innerText = "el promedio de tu compra es: $" + promedio;
 });
+*/
 
 console.log(total, masCaro, masBarato, promedio);
