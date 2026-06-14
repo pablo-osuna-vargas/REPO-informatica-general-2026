@@ -31,7 +31,9 @@ button {
 }
 
 p {
+	margin: 1rem;
 	padding: 1rem;
+	font-size: 3rem;
 }
 
 h1, h2, section {
