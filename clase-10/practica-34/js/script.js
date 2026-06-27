@@ -51,8 +51,13 @@ for (let i=0;i<obras.length;i++) {
 
 
 let botonMostrar = document.querySelector("#mostrarMas");
+let cargarImagenes = false; // bandera para que registra si el botón fue presionado y cargo las imagenes (true) o si aún no (false, estado original) //
+
 botonMostrar.addEventListener("click", function() {
+	if(!cargarImagenes) {
 	mostrarMas();
+	cargarImagenes = true;
+	}
 })
 
 
@@ -95,13 +100,13 @@ function mostrarMas() {
 
 	obras.push(nueva1,nueva2,nueva3,nueva4,nueva5);
 
-for(i=5;i<obras.length;i++) {
-	exhibit = "<div><p>" + obras[i].titulo + "<br>";
-	exhibit += "<img src=" + obras[i].imagen + " " + "alt=" + "kuitca-" + i + ">";
-	exhibit += "</p></div>";
-	
-	galeria2.innerHTML += exhibit;
-	console.log(obras);
-}
+	for(i=5;i<obras.length;i++) {
+		exhibit = "<div><p>" + obras[i].titulo + "<br>";
+		exhibit += "<img src=" + obras[i].imagen + " " + "alt=" + "kuitca-" + i + ">";
+		exhibit += "</p></div>";
+		
+		galeria2.innerHTML += exhibit;
+		console.log(obras);
+	}
 
 }

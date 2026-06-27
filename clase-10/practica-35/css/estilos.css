@@ -1,0 +1,23 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  background: rgba(100, 100, 0, 0.5);
+}
+
+/* Contenedor principal */
+#contenedor {
+  width: 100%;
+  max-width: 960px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: Abel;
+}

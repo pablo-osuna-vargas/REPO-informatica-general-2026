@@ -1,27 +1,53 @@
-/* estilos para resetear todo el html */
+/* Reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* estilos específicos de los elementos html principales */
+/* Fondo general */
 body {
-	margin: 1rem;
-	background-color: rgba(100, 100, 50, 0.3);
-	font-family: "Federo", sans-serif;
- 	font-weight: 400;
- 	font-style: normal;
+  background: rgba(100, 100, 0, 0.5);
 }
 
+/* Contenedor principal */
 #contenedor {
-	width: 100%;
-	max-width: 960px;
-	margin: 1rem auto;
-	padding: 1rem;
+  width: 100%;
+  max-width: 960px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: Abel;
 }
 
+/* Flex column centrado */
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Texto centrado */
+.centrado {
+	display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* Imágenes */
 img {
-	margin: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid gold;
+  width: 300px;
+}
+
+/* Botón */
+#mostrarMas {
+	margin: 1rem auto;
+	padding: 0.3rem;
+	background: rgba(250, 150, 250, 0.2);
 }
