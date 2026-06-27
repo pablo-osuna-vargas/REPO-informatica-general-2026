@@ -1,4 +1,3 @@
-
 // COMO LOGRO ESTO SÓLO EN LA PAGINA PRINCIPAL ????? //
 // publicidad si, publicidad no //
 alert("bienvenido a nuestra página!");
@@ -12,13 +11,12 @@ if(siNo != false) {
 }
 
 
-// COMO LOGRO ESTO SÓLO EN PÁGINAS SECUNDARIAS ????? //
 // Interacción con el article de páginas secundarias //
 const fondoArticle = document.querySelector(".secundaria");
-fondoArticle.addEventListener("mouseover", function() {
+  fondoArticle.addEventListener("mouseover", function() {
   fondoArticle.style.backgroundColor = "lightblue";
 });
 
-fondoArticle.addEventListener("mouseout", function() {
+  fondoArticle.addEventListener("mouseout", function() {
   fondoArticle.style.backgroundColor = "";
 });
