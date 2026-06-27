@@ -7,8 +7,8 @@ let siNo = confirm("este sitio puede mantenerse gracias a nuestros anunciantes, 
 if(siNo != false) {
   let publicidadNo = document.querySelector("#fijo");
   let publicidadNo2 =document.querySelector("#fijo2");
-  publicidadNo.style.visibility = "hidden";
-  publicidadNo2.style.visibility = "hidden";
+  publicidadNo.style.display = "none";
+  publicidadNo2.style.display = "none";
 }
 
 
