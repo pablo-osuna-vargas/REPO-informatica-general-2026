@@ -1,23 +1,107 @@
-/* Reset */
+/* reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-/* Fondo general */
-body {
-  background: rgba(100, 100, 0, 0.5);
-}
-
-/* Contenedor principal */
 #contenedor {
-  width: 100%;
-  max-width: 960px;
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-family: Abel;
+	width: 100%;
+	max-width: 960px;
+	margin: 1rem auto;
+	font-family: Federo;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
+
+body {
+	background-color: whitesmoke;
+}
+
+.centrado {
+	text-align: center;
+	border: 1px black;
+}
+
+.secundaria {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+header, footer, h1, h2 {
+	margin: 0.5rem auto;
+}
+
+p {
+	padding: 1rem;
+}
+
+.imagenWidth {
+	width: 600px;
+	padding: 1rem;
+}
+
+/* estilos para el nav y sus elementos */
+nav, nav ul {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	background-color: rgba(0, 150, 50, 0.3);
+}
+
+nav li {
+	list-style: none;
+	display: inline-block;
+	margin: 0.3rem;
+}
+
+#fijo {
+	position: fixed;
+	top: 100px;
+	right: 10px;
+	background: rgba(250, 0, 150, 0.8);
+
+	padding: 0.1rem;
+	text-align: center;
+	font-family: Abel;	
+	color: yellow;
+}
+
+#fijo2 {
+	position: fixed;
+	bottom: 100px;
+	left: 10px;
+	background: rgba(250, 150, 0, 0.8);
+
+	padding: 0.1rem;
+	text-align: center;
+	font-family: Abel;	
+	color: darkblue;
+}
+/*
+a:link {
+	padding: 0.2rem;
+	color: rgba(200, 200, 200, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+a:visited {
+	padding: 0.2rem;
+	color: rgba(50, 50, 50, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+a:hover {
+	padding: 0.2rem;
+	color: rgba(200, 200, 200, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}
+
+a:active {
+	padding: 0.2rem;	
+	color: rgba(200, 200, 200, 1.0);
+	background-color: rgba(150, 50, 150, 0.6);
+}*/
