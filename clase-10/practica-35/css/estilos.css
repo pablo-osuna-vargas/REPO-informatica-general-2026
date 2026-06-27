@@ -79,7 +79,6 @@ nav, nav ul {
 nav li {
 	list-style: none;
 	display: inline-block;
-	margin: 0.3rem;
 }
 nav a {
 	padding: 0.2rem;
