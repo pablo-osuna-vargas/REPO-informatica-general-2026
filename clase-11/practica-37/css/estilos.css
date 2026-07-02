@@ -30,6 +30,10 @@ button {
 	margin: 1rem;
 }
 
+p, fieldset {
+	margin: 1rem;
+}
+
 footer a {
 	display: inline-block;
 	margin: 0.5rem;}

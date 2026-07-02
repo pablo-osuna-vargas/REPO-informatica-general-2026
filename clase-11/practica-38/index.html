@@ -2,25 +2,34 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Práctica 3 - </title>
+	<title>Práctica 38 - Equipamiento</title>
 	<link href="css/estilos.css" rel="stylesheet">
 </head>
 
 <body>
 	<div id="contenedor">
 		<header class="centrado">
-			<h1></h1>
-				<h2></h2>
-			<nav>
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="cementerio.html">XXX</a></li>
-					<li><a href="biblioteca_nacional.html">XXX</a></li>
-				</ul>
-			</nav>
+			<h1>Práctica 38</h1>
+				<h2>Equipamiento</h2>
 		</header>
 
 		<main>
+			<fieldset>
+				<label for="legajo">Ingresar No. de Legajo:</label>
+				<input type="number" name="legajo" id="legajo">
+				<br>
+				<button id="enviar">Enviar</button>
+			</fieldset>
+
+			<fieldset>
+				<button type="button" id="candidato1" disabled>Candidato 1</button>
+				<button type="button" id="candidato2" disabled>Candidato 2</button>
+				<button type="button" id="candidato3" disabled>Candidato 3</button>
+			</fieldset>
+
+			<button id="cierre">Cierre de comicios</button>
+
+			<p id="resultados"></p>
 		</main>
 
 		<footer class="centrado">
