@@ -2,25 +2,39 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Práctica 3 - </title>
+	<title>Práctica 36 - Biblioteca</title>
 	<link href="css/estilos.css" rel="stylesheet">
 </head>
 
 <body>
 	<div id="contenedor">
 		<header class="centrado">
-			<h1></h1>
-				<h2></h2>
-			<nav>
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="cementerio.html">XXX</a></li>
-					<li><a href="biblioteca_nacional.html">XXX</a></li>
-				</ul>
-			</nav>
+			<h1>Práctica 36</h1>
+				<h2>Biblioteca</h2>
 		</header>
 
 		<main>
+			<form id="sistema">
+				<label for="titulo">Título:</label>
+				<input type="text" name="titulo" id="titulo">
+				<br>
+				<label for="Autor">Autor:</label>
+				<input type="text" name="autor" id="autor">
+				<br>
+				<label for="año">Año:</label>
+				<input type="number" name="number" id="año">
+				<br>
+				<label for="prestamo">En préstamo:</label>
+				<select id="prestamo">
+					<option value="si">SI</option>
+					<option value="no">NO</option>
+				</select>
+			</form>
+
+			<button type="button" id="ingresarDatos">Ingresar Datos</button>
+			<button type="button" id="calcular">Calcular Datos</button>
+
+			<p id="resultados"></p>
 		</main>
 
 		<footer class="centrado">
