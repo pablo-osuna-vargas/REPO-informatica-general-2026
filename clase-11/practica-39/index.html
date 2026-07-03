@@ -2,25 +2,54 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Práctica 3 - </title>
+	<title>Práctica 39 - Atletas entrenando</title>
 	<link href="css/estilos.css" rel="stylesheet">
 </head>
 
 <body>
 	<div id="contenedor">
 		<header class="centrado">
-			<h1></h1>
-				<h2></h2>
-			<nav>
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="cementerio.html">XXX</a></li>
-					<li><a href="biblioteca_nacional.html">XXX</a></li>
-				</ul>
-			</nav>
+			<h1>Práctica 39</h1>
+				<h2>Atletas entrenando</h2>
 		</header>
 
 		<main>
+			<form id="cargar">
+				<fieldset>
+					<legend>Datos personales</legend>
+						<label for="nombre">Nombre:</label>	
+						<input type="text" name="nombre" id	="nombre">
+							<br>
+						<label for="adad">Edad:</label>
+						<input type="number" name="edad" id="edad">
+				</fieldset>
+				
+				<fieldset>
+					<legend>Ejercicios</legend>
+						<label for="fuerza">Fuerza</label>
+						<input type="checkbox" id="fuerza" name="fuerza" value="fuerza">
+							<br>
+						<label for="flexibilidad">Flexibilidad</label>
+						<input type="checkbox" id="flexibilidad" name="flexibilidad" value="flexibilidad">
+							<br>
+						<label for="resistencia">Resistencia</label>
+						<input type="checkbox" id="resistencia" name="resistencia" value="resistencia">
+				</fieldset>
+
+				<fieldset>
+					<legend>Tiempo</legend>
+						<label for="minutos">Minutos:</label>
+						<input type="number" name="minutos" id="minutos">
+				</fieldset>
+
+						<button id="cargarDatos">Cargar datos</button>
+							<br>
+						<button id="resumen">Resumen</button>
+			</form>
+
+			<p id="mostrarInfo"></p>
+
+			<button id="recargar">Recargar página</button>
 		</main>
 
 		<footer class="centrado">

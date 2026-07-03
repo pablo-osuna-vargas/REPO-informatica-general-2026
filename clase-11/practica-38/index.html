@@ -14,22 +14,43 @@
 		</header>
 
 		<main>
-			<fieldset>
-				<label for="legajo">Ingresar No. de Legajo:</label>
-				<input type="number" name="legajo" id="legajo">
-				<br>
-				<button id="enviar">Enviar</button>
-			</fieldset>
+			<form id="carga">
+				<fieldset id="cargarDatos">
+					<legend>Ingreso de equipos</legend>
+						<label for="descripcion">Descripción de item:</label>
+						<input type="text" name="descripcion" id="descripcion">
 
-			<fieldset>
-				<button type="button" id="candidato1" disabled>Candidato 1</button>
-				<button type="button" id="candidato2" disabled>Candidato 2</button>
-				<button type="button" id="candidato3" disabled>Candidato 3</button>
-			</fieldset>
+						<label for="estado">Estado:</label>
+						<select id="estado">
+							<option value="">Seleccionar...</option>
+							<option value="prestado">prestado</option>
+							<option value="no-prestado">NO prestado</option>
+						</select>
+						<br>
+						<button id="cargarEquipo">Cargar equipo</button>
+						<br>
+						<button id="enviarDatos">Enviar Datos Cargados</button>
 
-			<button id="cierre">Cierre de comicios</button>
+						<ul id="lista" disabled>Equipamiento disponible:</ul>
+				</fieldset>
 
-			<p id="resultados"></p>
+				<fieldset id="pedidos" disabled>
+					<legend>Préstamo de equipos</legend>
+						<label for="equipoDescripcion">Equipo pedido:</label>
+						<input type="text" name="equipoDescripcion" id="equipoDescripcion">
+
+						<label for="prestamoTiempo">Cant. días a préstamo:</label>
+						<input type="number" name="prestamoTiempo" id="prestamoTiempo">
+						<br>
+						<button type="button" id="cargarPedido">Cargar Pedido individual</button>
+						<br>
+						<button type="button" id="enviarPedido">Enviar Pedido Total</button>
+					</fieldset>
+			</form>
+
+			<ul id="mostrarInfo" disabled>Lista de pedidos:</ul>
+
+			<button id="recargar">Recargar página</button>
 		</main>
 
 		<footer class="centrado">
