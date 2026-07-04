@@ -31,11 +31,12 @@ body {
 
 fieldset {
 	margin: 1rem;
+	padding: 1rem;
 }
 
-button {
+#cargarItem, #calcularTotalCompra {
 	display: block;
-	margin: 1rem;
+	padding: 1rem;
 }
 
 footer a {

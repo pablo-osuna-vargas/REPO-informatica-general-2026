@@ -16,25 +16,38 @@
 		<main>
 			<form>
 				<fieldset>
-					<label for="item">Item comprado:</label>
-					<input type="text" name="item" id="item">
-						<br>
-					<label for="precio">Precio:</label>
-					<input type="number" name="precio" id="precio">
+					<legend>Compras</legend>
+						<label for="item">Item comprado:</label>
+						<input type="text" name="item" id="item">
+							<br>
+						<label for="precio">Precio:</label>
+						<input type="number" name="precio" id="precio">
 				</fieldset>
 
 				<fieldset>
-					<label for="medio">Medio de pago:</label>
-					<label for="medio">Efectivo</label>
-					<input type="checkbox" name="efectivo" id="efectivo" value="efectivo">
-					<label for="medio">Débito</label>
-					<input type="checkbox" name="debito" id="debito" value="debito">
-					<label for="medio">Crédito</label>
-					<input type="checkbox" name="credito" id="credito" value="credito">
+					<legend>Medio de pago:</legend>
+						<label for="medio">Efectivo</label>
+							<input type="radio" name="efectivo" id="efectivo" value="efectivo">
+						<label for="medio">Débito</label>
+							<input type="radio" name="debito" id="debito" value="debito">
+						<label for="medio">Crédito</label>
+							<input type="radio" name="credito" id="credito" value="credito">
+				</fieldset>
+
+				<fieldset>
+					<legend>cargar item</legend>
+						<button type="button" id="cargarItem">cargar</button>
+				</fieldset>
+
+				<fieldset>
+					<legend>Calcular Total de compra</legend>
+						<button type="button" id="calcularTotalCompra">Total</button>
 				</fieldset>
 			</form>
 
-			<ul id="resultados" disabled></ul>
+			<div id="resultados" disabled></div>
+
+			<button type="button" id="recargarPagina">Recargar página</button>
 		</main>
 
 		<footer class="centrado">
