@@ -1,0 +1,55 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* centrar horizontalmente el contenedor */
+body {
+	background-color: beige;
+	font-family: Roboto, sans-serif;
+}
+
+/* ancho maximo definido */
+#contenedor {
+	width: 100%;
+	max-width: 960px;
+	margin: 1rem auto;
+
+	text-align: center;
+}
+
+body, #contenedor, footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header, main, footer {
+	margin: 1rem 0;
+	padding: 1rem;
+}
+
+main, .final {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-bottom: 10rem;
+}
+
+.boton {
+	background: whitesmoke;
+	margin: 1em 1rem;
+	padding: 0.5em 1rem;
+}
+
+.final {
+	font-size: 2rem;
+}
+
+footer a {
+	display: inline-block;
+	margin: 0.5rem;
+}

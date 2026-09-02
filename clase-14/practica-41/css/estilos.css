@@ -1,0 +1,61 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* centrar horizontalmente el contenedor */
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: beige;
+	font-family: Roboto;
+}
+
+/* ancho maximo definido */
+#contenedor {
+	width: 100%;
+	max-width: 960px;
+	margin: 1rem auto;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.boton {
+	background: whitesmoke;
+	margin: 1em;
+	padding: 1em;
+}
+
+div {
+	margin: 3em;
+}
+
+.rojo, .verde, .azul, .negro {
+	width: 6em;
+	height: 6em;
+}
+
+.rojo {
+	background: red;
+}
+
+.verde {
+	background: green;
+}
+
+.azul {
+	background: blue;
+}
+
+.todoNegro {
+	background: black;
+}
+
+footer a {
+	display: inline-block;
+	margin: 0.5rem;}
