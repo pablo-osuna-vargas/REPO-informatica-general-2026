@@ -28,7 +28,7 @@ function azar(){
 	contenedor.innerText = `número sorteado: ${numNuevo}`; // el numero nuevo es el numero de azar para la siguiente apuesta
 	conteo.innerText = `puntaje: ${puntaje}`// actualizo el puntaje en pantalla
 	numAzar = numNuevo;
-	console.log(`numero generado: ${numNuevo}, apuesta ${apuesta},  puntos: ${puntaje}`); 
+	console.log(`numero generado: ${numNuevo}, apuesta ${apuesta},  puntos: ${puntaje}`);
 }
 
 // al apostar con boton mayor dispara la funcion azar y registra en la variable apuesta que boton apreto

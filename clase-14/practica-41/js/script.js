@@ -5,26 +5,14 @@ let btnB = document.querySelector("#botonAzul");
 let btnBorrar = document.querySelector("#borrar");
 let btnNegro = document.querySelector("#negro");
 
-/*
-// funcion basica
-btnR.addEventListener("click", function(){
-	let nuevoRojo = document.createElement("div");
-	nuevoRojo.classList.add("rojo");
-	contCuadrados.append(nuevoRojo);
-})
-*/
-
-// función genérica con un parametro (color)
 let cuadrados = [];
 
+// función genérica con un parametro (color)
 function crearCuadrado(color) {
 	nuevoCuadrado = document.createElement("div"); // aca va lo que quiero crear (un div con cierto tamaño)
 	nuevoCuadrado.classList.add(color); // acá hago el cambio de clase segun el valor que adquiere el parámetro "color"
-	contCuadrados.append(nuevoCuadrado); // acá selecciono el contenedor capturado y uso append para agregar uno despues del otro
-
-	cuadrados.push(nuevoCuadrado);
-
-	return nuevoCuadrado; // devuelvo el resultado para poder usarlo con otra funcion fuera de esta
+	contCuadrados.append(nuevoCuadrado); // acá uso el elemento contenedor capturado y uso append para agregar uno despues del otro
+	cuadrados.push(nuevoCuadrado); // agrego el cuadrado creado al array
 }
 
 function todoNegro() {
@@ -32,6 +20,11 @@ function todoNegro() {
 		cuadrado.classList.add("todoNegro"); // al recorrer cada "cuadrado" intercambia su clase por "todoNegro"
 	})
 }
+
+// funcion con funcion flecha interna EJEMPLO:
+//function todoNegro(){
+//	cuadrados.forEach(cuadrado => cuadrado.classList.add("todoNegro"));
+//}
 
 btnR.addEventListener("click", () => crearCuadrado("rojo"));
 btnG.addEventListener("click", () => crearCuadrado("verde"));
