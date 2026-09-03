@@ -3,10 +3,81 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
-	border: 1px solid gold;
 }
 
 body {
-	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: sans-serif;
 }
+
+/* Contenedor principal */
+#contenedor {
+  display: flex;
+  flex-direction: column; /* apila header, main y footer */
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column; /* títulos uno debajo del otro */
+  align-items: center;    /* centra horizontalmente */
+  justify-content: center;/* centra verticalmente si das altura */
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column; /* secciones apiladas */
+  align-items: center;    /* centra cada sección horizontalmente */
+  justify-content: flex-start; /* arranca desde arriba */
+}
+
+/* Intro */
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+	list-style: none;
+	padding: 1rem 0;
+}
+
+/* Botones */
+#botones {
+  display: flex;
+  flex-direction: row;    /* botones en fila */
+  justify-content: center;/* centrados en el contenedor */
+}
+
+button {
+	margin: 1rem;
+	padding: 1rem;
+}
+
+/* Panel y Record */
+#panel, #record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column; /* texto y enlace uno debajo del otro */
+  align-items: center;    /* centrado horizontal */
+  justify-content: center;/* centrado vertical si das altura */
+}
+
+/*header, main, footer, #contenedor, #intro, #botones, #panel, #record {
+	margin: 1rem 0;
+}*/
+
+#contenedor, #intro, #botones, #panel, #record {
+	padding: 1rem 0;
+} 

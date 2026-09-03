@@ -1,3 +1,5 @@
+// versión con operador ternario
+
 // inicializo variables de juego
 let puntos = 10;
 let rondaN = 0;
@@ -30,11 +32,7 @@ function jugar() {
 	console.log(numDado);
 
 	if(accion === "explorar"){
-		if(numDado % 2 === 0){
-			puntos++;
-		} else{
-			puntos--;
-		}
+		puntos += (numDado % 2 === 0 ? 1 : -1);
 	}	
 	
 	if(accion === "descansar"){
@@ -48,11 +46,7 @@ function jugar() {
 	}
 	
 	if(accion === "arriesgar"){
-		if(numDado >= 4){
-			puntos +=3;
-		} else if(numDado < 4){
-			puntos -=3;
-		}
+		puntos += (numDado >= 4 ? 3 : -3);
 	}
 
 	imgDado.src = `img/${numDado}.jpeg`;
@@ -63,7 +57,6 @@ function jugar() {
 	rondaN++;
 	rondaNum.innerText = `ronda No: ${rondaN}
 						  puntos actuales: ${puntos}`
-	//alert("te animás a otra ronda?");
 }
 
 function panel() {
