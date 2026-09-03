@@ -24,7 +24,7 @@ body {
 
 /* Main */
 main {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 /* Header y footer */
@@ -38,7 +38,7 @@ header, footer {
 h1, h2 {
   color: black;
   text-align: center;
-  margin: 1rem;
+  margin: 0,5rem;
 }
 
 /* Navegación agrupada con inline-block */
